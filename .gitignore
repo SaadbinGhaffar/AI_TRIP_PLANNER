@@ -1,10 +1,31 @@
-# Python-generated files
-__pycache__/
-*.py[oc]
-build/
-dist/
-wheels/
-*.egg-info
+# Create .gitignore file
+New-Item -Path ".gitignore" -ItemType File -Force
+notepad .gitignore
+```
 
-# Virtual environments
-.venv
+Add this content to `.gitignore`:
+```
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
